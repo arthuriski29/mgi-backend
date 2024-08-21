@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "c0d5006d-2494-46f6-8f70-1a59908377d8",
+		"name": "mgi_db",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27932462"
+	},
+	"item": [
+		{
+			"name": "DATA",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "IMPORT FILE TO DB",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/import/:importType",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"import",
+								":importType"
+							],
+							"variable": [
+								{
+									"key": "importType",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPLOAD FILE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/upload/:uploadType",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"upload",
+								":uploadType"
+							],
+							"variable": [
+								{
+									"key": "uploadType",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TEST CONNECTION",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
